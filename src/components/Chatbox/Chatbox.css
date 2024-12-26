@@ -1,0 +1,36 @@
+/* Chatbox.css */
+
+.chatbox-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Make sure the chatbox takes up the full view height */
+    max-height: 500px; /* Set a max height to prevent overflow */
+    padding: 10px;
+    overflow: hidden; /* Prevent the container from growing beyond its max height */
+  }
+  
+  .messages-container {
+    flex-grow: 1;
+    max-height: 360px; /* Ensure the message area has a limited height */
+    overflow-y: auto; /* Enable scrolling within the message area */
+    padding: 10px;
+    margin-bottom: 10px; /* Ensure there is some space between the form and messages */
+  }
+  
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    max-height: 120px;
+  }
+  
+  /* Optional scrollbar styling */
+  .messages-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .messages-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
